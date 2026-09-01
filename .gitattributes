@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+*.cff text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+LICENSE text eol=lf
+licenses/MSIS2_LICENSE text eol=lf
+
+*.pyc binary

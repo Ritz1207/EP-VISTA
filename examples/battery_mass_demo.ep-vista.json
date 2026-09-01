@@ -1,0 +1,151 @@
+{
+  "name": "电池与质量演示（系统参数为合成示例）",
+  "mission": {
+    "start_utc": "2025-03-20T00:00:00Z",
+    "design_life_hours": 100.0,
+    "altitude_km": 250.0,
+    "ltan_hours": 6.0
+  },
+  "spacecraft": {
+    "mass_kg": null,
+    "body_frontal_area_m2": 0.5,
+    "drag_coefficient": 2.2,
+    "solar_array_drag_coefficient": 2.2,
+    "structure_mass_kg": 2.0,
+    "payload_mass_kg": 4.0
+  },
+  "power": {
+    "total_power_kW": 0.5,
+    "propulsion_power_kW": 0.3,
+    "solar_array_mode": "fixed_hardware",
+    "solar_array_specific_power_W_m2": 300.0,
+    "solar_array_area_m2": 1.5,
+    "supply_mode": "battery",
+    "solar_array_specific_power_W_kg": 300.0,
+    "battery_usable_specific_energy_kWh_kg": 0.16,
+    "battery_max_power_kW": 0.1
+  },
+  "atmosphere": {
+    "mode": "historical",
+    "weather_file": "data/space_weather/space_weather_20250320_10002h_3h.csv",
+    "fixed_activity": null
+  },
+  "sampling": {
+    "phase_step_deg": 5,
+    "batch_rows": 50000
+  },
+  "selected_thruster_ids": [
+    "Customized_01",
+    "Hall_01",
+    "Ion_01"
+  ],
+  "custom_thrusters": [],
+  "schema_version": "2.3",
+  "propulsion_structure": {
+    "Customized_01": {
+      "mass_kg": 1.8,
+      "source": "用户输入",
+      "notes": "不含推进剂；配套部件计入范围由用户确认。"
+    },
+    "Hall_01": {
+      "mass_kg": 3.0,
+      "source": "https://www.researchgate.net/publication/24317817_Evaluation_of_Low_Power_Hall_Thruster_Propulsion",
+      "notes": "推力器单机"
+    },
+    "Ion_01": {
+      "mass_kg": 13.0,
+      "source": "https://newfrontiers.larc.nasa.gov/NF4/PDF_FILES/03-Dolloff.pdf",
+      "notes": "不含推进剂。但已含线缆质量。"
+    }
+  },
+  "library_snapshot": [
+    {
+      "thruster_id": "ENG_ABEP20",
+      "name_zh": "吸气式电推进（推功比20 mN/kW，比冲3000 s）",
+      "architecture": "abep",
+      "propellant": "air",
+      "thrust_to_power_mN_kW": 20.0,
+      "isp_s": 3000.0,
+      "thruster_type": "其他",
+      "minimum_power_kW": 0.0,
+      "maximum_power_kW": null,
+      "intake_efficiency": 0.4,
+      "power_basis": "engineering design input",
+      "data_type": "engineering_design_case",
+      "metric_coincidence": "same_design_point",
+      "source": "当前VLEO方案工程输入",
+      "locator": "",
+      "verification_status": "pending_human_verification",
+      "notes": "有效集气面积暂取卫星本体迎风面积",
+      "structure_mass_kg": null,
+      "structure_mass_source": "",
+      "structure_mass_notes": ""
+    },
+    {
+      "thruster_id": "Customized_01",
+      "name_zh": "ABEP（自定义）",
+      "architecture": "abep",
+      "propellant": "air",
+      "thrust_to_power_mN_kW": 22.0,
+      "isp_s": 3500.0,
+      "thruster_type": "离子",
+      "minimum_power_kW": 0.0,
+      "maximum_power_kW": null,
+      "intake_efficiency": 0.4,
+      "power_basis": "user input",
+      "data_type": "user_input",
+      "metric_coincidence": "same_user_input_point",
+      "source": "用户输入",
+      "locator": "",
+      "verification_status": "user_input",
+      "notes": "效率由推功比和比冲推导，不作为独立输入。",
+      "structure_mass_kg": 1.8,
+      "structure_mass_source": "用户输入",
+      "structure_mass_notes": "不含推进剂；配套部件计入范围由用户确认。"
+    },
+    {
+      "thruster_id": "Hall_01",
+      "name_zh": "D-55 TAL",
+      "architecture": "traditional",
+      "propellant": "Xe",
+      "thrust_to_power_mN_kW": 58.92,
+      "isp_s": 1608.0,
+      "thruster_type": "霍尔",
+      "minimum_power_kW": 0.3,
+      "maximum_power_kW": 2.1,
+      "intake_efficiency": null,
+      "power_basis": "user input",
+      "data_type": "user_input",
+      "metric_coincidence": "same_user_input_point",
+      "source": "NASA Technical Reports Server",
+      "locator": "https://ntrs.nasa.gov/api/citations/19940029100/downloads/19940029100.pdf",
+      "verification_status": "user_input",
+      "notes": "推力直接测量；推功比由同一行计算",
+      "structure_mass_kg": 3.0,
+      "structure_mass_source": "https://www.researchgate.net/publication/24317817_Evaluation_of_Low_Power_Hall_Thruster_Propulsion",
+      "structure_mass_notes": "推力器单机"
+    },
+    {
+      "thruster_id": "Ion_01",
+      "name_zh": "NEXT-C",
+      "architecture": "traditional",
+      "propellant": "Xe",
+      "thrust_to_power_mN_kW": 35.0,
+      "isp_s": 4200.0,
+      "thruster_type": "离子",
+      "minimum_power_kW": 0.5,
+      "maximum_power_kW": 6.9,
+      "intake_efficiency": null,
+      "power_basis": "user input",
+      "data_type": "user_input",
+      "metric_coincidence": "same_user_input_point",
+      "source": "NEXT-C status report",
+      "locator": "https://newfrontiers.larc.nasa.gov/NF4/PDF_FILES/03-Dolloff.pdf",
+      "verification_status": "user_input",
+      "notes": "低功率运行时，比冲会降低至2500-3000",
+      "structure_mass_kg": 13.0,
+      "structure_mass_source": "https://newfrontiers.larc.nasa.gov/NF4/PDF_FILES/03-Dolloff.pdf",
+      "structure_mass_notes": "不含推进剂。但已含线缆质量。"
+    }
+  ]
+}

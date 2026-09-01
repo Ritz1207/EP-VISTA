@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ep-vista"
+version = "1.0"
+description = "EP-VISTA VLEO electric-propulsion system trade-analysis platform"
+readme = "README.md"
+# Standard AGPL-3.0-or-later plus the local permission defined in
+# ADDITIONAL_PERMISSION.md; this does not license third-party models/data.
+license = "LicenseRef-EP-VISTA-AGPL-3.0-or-later-NRLMSIS"
+license-files = ["LICENSE", "ADDITIONAL_PERMISSION.md", "licenses/*.txt", "licenses/*.md", "licenses/MSIS2_LICENSE"]
+authors = [{name = "Ritz"}]
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy==2.4.6",
+  # Required for the current backend. The wrapper's MIT license does not
+  # replace the separate NRLMSIS 2.0 model terms in licenses/MSIS2_LICENSE.
+  "pymsis==0.12.0",
+  "matplotlib==3.11.1",
+  "PySide6-Essentials==6.11.2",
+]
+
+[project.urls]
+Repository = "https://github.com/Ritz1207/EP-VISTA"
+Issues = "https://github.com/Ritz1207/EP-VISTA/issues"
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+ep-vista = "ep_vista_core.cli:main"
+ep-vista-gui = "ep_vista_app.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

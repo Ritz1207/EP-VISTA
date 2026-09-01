@@ -1,0 +1,13 @@
+name: ep-vista
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy==2.4.6
+      # Required backend; review licenses/MSIS2_LICENSE before installing/using.
+      # EP-VISTA's ADDITIONAL_PERMISSION.md grants no rights in the NRL model.
+      - pymsis==0.12.0
+      - matplotlib==3.11.1
+      - PySide6-Essentials==6.11.2

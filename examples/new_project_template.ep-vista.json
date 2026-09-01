@@ -1,0 +1,42 @@
+{
+  "name": "新建EP-VISTA项目",
+  "mission": {
+    "start_utc": "2025-03-20T00:00:00Z",
+    "design_life_hours": 500.0,
+    "altitude_km": 230.0,
+    "ltan_hours": 6.0
+  },
+  "spacecraft": {
+    "mass_kg": null,
+    "body_frontal_area_m2": 1.0,
+    "drag_coefficient": 2.2,
+    "solar_array_drag_coefficient": 2.2,
+    "structure_mass_kg": 2.0,
+    "payload_mass_kg": 4.0
+  },
+  "power": {
+    "total_power_kW": 1.0,
+    "propulsion_power_kW": 0.6,
+    "solar_array_mode": "auto_size",
+    "solar_array_specific_power_W_m2": 300.0,
+    "solar_array_area_m2": null,
+    "supply_mode": "solar",
+    "solar_array_specific_power_W_kg": 300.0,
+    "battery_usable_specific_energy_kWh_kg": null,
+    "battery_max_power_kW": null
+  },
+  "atmosphere": {
+    "mode": "historical",
+    "weather_file": "data/space_weather/space_weather_20250320_10002h_3h.csv",
+    "fixed_activity": null
+  },
+  "sampling": {
+    "phase_step_deg": 5,
+    "batch_rows": 250000
+  },
+  "selected_thruster_ids": [],
+  "custom_thrusters": [],
+  "schema_version": "2.3",
+  "propulsion_structure": {},
+  "library_snapshot": []
+}

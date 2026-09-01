@@ -1,0 +1,19 @@
+{
+  "source_url": "https://celestrak.org/SpaceData/SW-All.csv",
+  "source_file_name": "SW-All_20260827.csv",
+  "source_sha256": "CF390D31F53830A1443B828018D694136CF18706BCB99EFA7908FF83E130A7E3",
+  "pymsis_version": "0.12.0",
+  "start_utc": "2025-03-20T00:00:00Z",
+  "end_utc": "2026-05-10T18:00:00Z",
+  "duration_hours": 10002.0,
+  "step_hours": 3.0,
+  "row_count": 3335,
+  "warning_row_count": 7,
+  "f107_previous_day_min_sfu": 93.3,
+  "f107_previous_day_max_sfu": 316.5,
+  "f107_centered_81day_min_sfu": 123.2,
+  "f107_centered_81day_max_sfu": 168.0,
+  "ap_daily_min": 1.0,
+  "ap_daily_max": 144.0,
+  "interpretation": "Historical space-weather lookup coverage for the baseline. It may extend beyond the orbit-start analysis window so the final physical orbit has valid inputs. Propulsion-comparison duration is configured independently and is not design life."
+}

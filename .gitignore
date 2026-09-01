@@ -1,0 +1,31 @@
+# Keep shared data and examples visible; review provenance before upload.
+# Private projects, exports, library backups and caches remain local.
+/workspace/
+/_archive/
+/release_artifacts/
+/copyright_application/
+*.csv.lock
+*.csv.*.tmp
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pyd
+*.dll
+*.so
+*.dylib
+*.exe
+*.zip
+*.7z
+*.tar.gz
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

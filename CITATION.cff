@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "科研使用时请按CITATION.md选择BibTeX、GB/T 7714—2025或MLA格式，并另行引用实际使用的模型和数据来源。引用建议不是AGPL附加限制。"
+type: software
+title: "EP-VISTA: Electric Propulsion for VLEO Integrated System Trade Analysis"
+authors:
+  - family-names: "Ritz"
+version: "V1.0"
+date-released: "2026-09-01"
+repository-code: "https://github.com/Ritz1207/EP-VISTA"
+abstract: "根据轨道高度、LTAN和起始时刻生成圆形太阳同步轨道分析条件，用于电推进、供电和质量方案权衡的平台。第三方模型和数据另有许可。"
+# Formatted references are in CITATION.md. Add a DOI only after one exists.
